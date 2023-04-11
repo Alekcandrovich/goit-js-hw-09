@@ -23,7 +23,7 @@ form.addEventListener('submit', e => {
 
   let currentDelay = delay;
   for (let i = 1; i <= amount; i += 1) {
-    createPromise(i, delay)
+    createPromise(i, currentDelay)
       .then(({ position, delay }) => {
         Notiflix.Notify.success(
           `✅ Fulfilled promise ${position} in ${delay}ms`
